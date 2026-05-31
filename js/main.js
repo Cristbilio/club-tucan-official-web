@@ -61,6 +61,10 @@ const observer = new IntersectionObserver(function(entries) {
 const observeElements = document.querySelectorAll('.feature-card, .objective-item, .actividad-card');
 observeElements.forEach(el => {
     observer.observe(el);
+    // Show all .actividad-card immediately
+    if (el.classList.contains('actividad-card') || el.className.includes('actividad-card')) {
+        el.classList.add('visible');
+    }
 });
 
 // Stagger animation delays for feature cards
@@ -150,3 +154,54 @@ if (contactForm) {
         }
     });
 }
+
+// Image Modal for actividades
+const imageModal = document.getElementById('image-modal');
+const modalImage = document.getElementById('modal-image');
+const imageModalClose = document.querySelector('.image-modal-close');
+
+// Open modal when clicking on actividad images
+document.querySelectorAll('.actividad-image img').forEach(img => {
+    img.style.cursor = 'pointer';
+    img.addEventListener('click', function() {
+        if (imageModal && modalImage) {
+            modalImage.src = this.src;
+            modalImage.alt = this.alt;
+            imageModal.classList.add('is-open');
+            imageModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+    });
+});
+
+// Close modal when clicking close button
+if (imageModalClose) {
+    imageModalClose.addEventListener('click', function() {
+        if (imageModal) {
+            imageModal.classList.remove('is-open');
+            imageModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
+
+// Close modal when clicking outside the image
+if (imageModal) {
+    imageModal.addEventListener('click', function(e) {
+        if (e.target === imageModal) {
+            imageModal.classList.remove('is-open');
+            imageModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && imageModal && imageModal.classList.contains('is-open')) {
+        imageModal.classList.remove('is-open');
+        imageModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = 'auto';
+    }
+});
+// Tailwind should be loaded from HTML if needed. Removed stray HTML from this JS file.
