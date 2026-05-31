@@ -451,26 +451,22 @@ nav.scrolled {
     padding: 7rem 2rem;
     background: var(--white);
 }
-
 .actividades .container {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 .actividades h2 {
     text-align: center;
     font-size: 2.5rem;
     color: var(--primary);
     margin-bottom: 3rem;
 }
-
 .actividades-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-bottom: 3rem;
 }
-
 .actividad-card {
     background: var(--white);
     border-radius: 20px;
@@ -478,47 +474,55 @@ nav.scrolled {
     overflow: hidden;
     transition: all 0.3s ease;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    gap: 1rem;
     opacity: 0;
     transform: translateY(30px);
+    padding: 1.5rem;
 }
-
 .actividad-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 50px rgba(97, 184, 167, 0.2);
 }
-
 .actividad-card.visible {
     opacity: 1;
     transform: translateY(0);
 }
-
 .actividad-image {
-    width: 650px;
-    height: 350px;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
     flex-shrink: 0;
     overflow: hidden;
+    display: block;
+    background: #096ed3;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
 }
-
 .actividad-image img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
+.actividad-image img:hover {
+    transform: scale(1.02);
+}
 .actividad-content {
-    padding: 2rem;
-    flex: 1;
+    padding: 0;
+    flex: 0 1 auto;
+    max-width: 400px;
 }
-
 .actividad-content h3 {
     font-size: 1.5rem;
     color: var(--secondary);
     margin-bottom: 1rem;
     font-weight: normal;
 }
-
 .actividad-content p {
     margin-bottom: 0.5rem;
 }
@@ -714,6 +718,67 @@ nav.scrolled {
 
 .form-modal-content button:hover {
     background: #4a9688;
+}
+
+/* Image Modal */
+.image-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 1rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.image-modal.is-open {
+    display: flex;
+}
+
+.image-modal-content {
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 10px;
+    animation: zoomIn 0.3s ease;
+}
+
+.image-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--white);
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.image-modal-close:hover {
+    color: var(--secondary);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* Footer */
