@@ -29,11 +29,11 @@
                 <li><a href="themark.html">The Mark Program</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
-            <div class="mobile-menu" id="mobile-menu" aria-label="Menú móvil">
+            <button class="mobile-menu" id="mobile-menu" type="button" aria-label="Abrir menú" aria-controls="nav-links" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -42,7 +42,6 @@
         <div class="hero-content">
             <h1>Club Tucán</h1>
             <p>Club juvenil en Guatemala, un espacio seguro, formativo y dinámico para jóvenes de 14 a 22 años que desean crecer personal y académicamente.</p>
-            <!--<a href="nosotros.html" class="cta-button">Conoce más</a>-->
         </div>
     </section>
 
@@ -50,22 +49,26 @@
     <section id="actividades" class="actividades">
         <div class="container">
             <h2>Actividades</h2>
-            <div class="actividades-grid">
-                <div class="actividad-card">
-                    <div class="actividad-image">
-                        <img src="img/champion.jpeg" alt="Final Champions" loading="lazy">
-                    </div>
-                    <div class="actividad-content">
-                        <h3>Final Champions</h3>
-                        <p><strong>Día:</strong> Sábado 30 de Mayo</p>
-                        <p><strong>Hora:</strong> 10:00:00 AM - 4:00 PM</p>
-                        <p><strong>Precio:</strong> Q30.00 por persona</p>
-                       <!-- <a href="index.html#contacto" class="btn-primary">Contactar</a>-->
-                    </div>
-                </div>
+            <div class="actividades-grid" id="actividades-grid"></div>
 
-               
-            </div>
+            <!--
+                Para actualizar actividades, edita la lista de abajo.
+                Puedes duplicar un bloque entre llaves {...} para agregar otra actividad.
+            -->
+            <script type="application/json" id="actividades-data">
+            [
+                {
+                    "titulo": "Tarde de Boliche",
+                    "imagen": "img/sabado.webp",
+                    "alt": "Tarde de Boliche",
+                    "dia": "Sábado 06 de Junio",
+                    "hora": "2:30 - 5:40 PM",
+                    "precio": "Q40.00 por persona",
+                    "contacto": false
+                }
+                             
+            ]
+            </script>
 
             
         </div>
@@ -78,8 +81,8 @@
                 <img src="img/The_Mark_Program_big-1.svg" alt="The Mark Logo" class="mark-logo" loading="lazy">
             </div>
             <p>The Mark Program es un programa formativo diseñado para ayudar a los jóvenes de Club Tucán a dejar huella en su vida académica, personal y social.</p>
-            <p style="margin-top: 3rem; font-size: 1.3rem; font-weight: 500;">The Mark Program impulsa a cada joven a descubrir su potencial, fortalecer su carácter y asumir compromisos que impacten positivamente en su familia, sus amigos y la sociedad.</p>
-            <p style="font-style: italic; color: var(--secondary);">Más que un programa, es una experiencia que busca formar jóvenes con visión, iniciativa y valores sólidos.</p>
+            <p class="mark-intro">The Mark Program impulsa a cada joven a descubrir su potencial, fortalecer su carácter y asumir compromisos que impacten positivamente en su familia, sus amigos y la sociedad.</p>
+            <p class="mark-emphasis">Más que un programa, es una experiencia que busca formar jóvenes con visión, iniciativa y valores sólidos.</p>
 
             <a href="themark.html" class="cta-button">Más información</a>
         </div>
@@ -88,12 +91,12 @@
     <!-- Spiritual Formation Section -->
     <section id="formacion" class="spiritual">
         <div class="spiritual-content">
-            <div class="feature-icon" style="margin-bottom: 1.5rem;">
-              <img src="img/iglesia.png" alt="Formación espiritual" style="width: 4rem; height: 4rem;" loading="lazy">  
+            <div class="feature-icon spiritual-icon">
+              <img src="img/iglesia.png" alt="Formación espiritual" loading="lazy">  
             </div>
-            <h2 style="font-size: 1.875rem; font-style: italic;">Formación Espiritual</h2>
-            <p style="font-size: 1.125rem; color: #64748b; line-height: 1.625; margin-bottom: 2rem;">Ofrecemos actividades orientadas a fortalecer la vida cristiana de manera libre. La labor doctrinal y espiritual ha sido confiada a la <strong>Prelatura del Opus Dei</strong>, institución de la Iglesia Católica.</p>
-            <div style="display: inline-block; border: 2px solid rgba(97, 184, 167, 0.2); padding: 0.75rem 2rem; border-radius: 9999px; color: var(--primary); font-weight: bold; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.25em; font-style: italic;">
+            <h2 class="spiritual-title">Formación Espiritual</h2>
+            <p class="spiritual-description">Ofrecemos actividades orientadas a fortalecer la vida cristiana de manera libre. La labor doctrinal y espiritual ha sido confiada a la <strong>Prelatura del Opus Dei</strong>, institución de la Iglesia Católica.</p>
+            <div class="spiritual-badge">
                 Encontrar a Dios en lo ordinario
             </div>
         </div>
@@ -117,7 +120,7 @@
                 <div class="contact-info">
                     <h3>Información General</h3>
                     <div class="map-embed">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.3222215392134!2d-90.51182639999999!3d14.6532854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a2095977a08d%3A0xda6d3b0723231abe!2sClub%20Tuc%C3%A1n!5e1!3m2!1ses-419!2sgt!4v1771708147137!5m2!1ses-419!2sgt" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Club Tucán"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2950.3222215392134!2d-90.51182639999999!3d14.6532854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a2095977a08d%3A0xda6d3b0723231abe!2sClub%20Tuc%C3%A1n!5e1!3m2!1ses-419!2sgt!4v1771708147137!5m2!1ses-419!2sgt" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación de Club Tucán"></iframe>
                     </div>
                     
                     <div class="info-item">
@@ -128,10 +131,6 @@
                         <span><img src="img/phone.svg" alt="Teléfono"></span>
                         <span>+502 4241 7392</span>
                     </div>
-                    <!--<div class="info-item">
-                        <span><img src="img/mail.svg" alt="Email"></span>
-                        <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e58c8b838aa586899087919086848bcb8b8091">[email&#160;protected]</a></span>
-                    </div>-->
                 </div>
             </div>
         </div>
@@ -168,6 +167,6 @@
         <img class="image-modal-content" id="modal-image" alt="">
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

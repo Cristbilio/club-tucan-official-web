@@ -22,16 +22,16 @@
             <a href="index.html"><img src="img/tucanlogo.png" alt="Club Tucán Logo" class="logo"></a> 
             <ul class="nav-links" id="nav-links">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Acerca de</a></li>
+                <li><a href="nosotros.html">¿Quiénes somos?</a></li>
                 <li><a href="index.html#actividades">Actividades</a></li>
                 <li><a href="themark.html">The Mark Program</a></li>
                 <li><a href="index.html#contacto">Contacto</a></li>
             </ul>
-            <div class="mobile-menu" id="mobile-menu" aria-label="Menú móvil">
+            <button class="mobile-menu" id="mobile-menu" type="button" aria-label="Abrir menú" aria-controls="nav-links" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
@@ -44,13 +44,13 @@
                     <div class="actividad-image">
                         <img src="img/tutoria.webp" alt="Tutorías académicas" loading="lazy">
                     </div>
-                   <!--  <div class="actividad-content">
+                    <div class="actividad-content">
                         <h3>Tutorías Académicas</h3>
                         <p><strong>Día:</strong> Todos los jueves</p>
                         <p><strong>Hora:</strong> 3:00 PM - 4:00 PM</p>
                         <p><strong>Precio:</strong> Q30.00 por sesión</p>
                         <a href="index.html#contacto" class="btn-primary">Contactar</a>
-                    </div>-->
+                    </div>
                 </div>
             </div>
 
@@ -87,6 +87,12 @@
         <p class="copyright">&copy; <span id="current-year">2026</span> Club Tucán. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- Image Modal -->
+    <div id="image-modal" class="image-modal" aria-hidden="true">
+        <span class="image-modal-close">&times;</span>
+        <img class="image-modal-content" id="modal-image" alt="">
+    </div>
+
+    <script src="js/main.js" defer></script>
 </body>
 </html>
