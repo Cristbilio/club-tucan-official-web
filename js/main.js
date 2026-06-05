@@ -93,7 +93,7 @@ const initActividades = () => {
 };
 
 const initAnimations = () => {
-    const animatedElements = qsa('.feature-card, .objective-item, .actividad-card');
+    const animatedElements = qsa('.objective-item, .actividad-card');
     if (!animatedElements.length) return;
 
     animatedElements.forEach((element, index) => {

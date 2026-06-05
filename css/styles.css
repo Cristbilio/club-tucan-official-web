@@ -206,52 +206,6 @@ nav.scrolled {
     margin: 0 auto 4rem;
 }
 
-/* Features Grid */
-.features-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.feature-card {
-    background: var(--white);
-    padding: 2.5rem;
-    border-radius: 20px;
-    box-shadow: 0 5px 30px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-}
-
-.feature-card.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 50px rgba(97, 184, 167, 0.2);
-}
-
-.feature-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.feature-icon svg {
-    fill: var(--primary);
-    transition: fill 0.3s ease;
-}
-
-.feature-icon:hover svg {
-    fill: #2c3e50;
-}
-
-.feature-card h3 {
-    font-size: 1.5rem;
-    color: var(--primary);
-    margin-bottom: 1rem;
-}
 
 /* About Section */
 .about {
@@ -279,25 +233,6 @@ nav.scrolled {
     color: #555;
     font-size: 1.1rem;
     text-align: center;
-}
-
-.about-highlight {
-    background: var(--gradient-secondary);
-    color: var(--white);
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 40px rgba(239, 144, 2, 0.3);
-}
-
-.about-highlight h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-/* Objectives Section */
-.objectives {
-    padding: 5rem 2rem;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
 .objectives-container {
@@ -402,31 +337,6 @@ nav.scrolled {
     font-style: italic;
 }
 
-.mark-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-    margin-top: 3rem;
-}
-
-.mark-item {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1.5rem;
-    border-radius: 15px;
-    border: 1px solid rgba(97, 184, 167, 0.2);
-    transition: all 0.3s ease;
-}
-
-.mark-item:hover {
-    background: rgba(97, 184, 167, 0.1);
-    transform: translateY(-5px);
-}
-
-.mark-item-icon {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-}
-
 /* Spiritual Section */
 .spiritual {
     padding: 5rem 2rem;
@@ -484,14 +394,6 @@ nav.scrolled {
     text-transform: uppercase;
     letter-spacing: 0.25em;
     font-style: italic;
-}
-
-.spiritual-note {
-    background: var(--light);
-    padding: 2rem;
-    border-radius: 15px;
-    margin-top: 2rem;
-    border: 2px solid var(--primary);
 }
 
 /* Actividades Section */
@@ -609,16 +511,6 @@ nav.scrolled {
     max-width: 860px;
     margin: 0 auto 3rem;
     text-align: center;
-}
-
-.section-kicker {
-    display: inline-block;
-    margin-bottom: 0.75rem;
-    color: var(--secondary);
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0;
-    text-transform: uppercase;
 }
 
 .noticias-heading h2 {
@@ -1427,10 +1319,6 @@ footer {
     .about-content {
         grid-template-columns: 1fr;
         gap: 2rem;
-    }
-
-    .features-grid {
-        grid-template-columns: 1fr;
     }
 
     .mark-content h2 {
