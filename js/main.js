@@ -190,9 +190,11 @@ const initImageModal = () => {
     const imageModal = qs('#image-modal');
     const modalImage = qs('#modal-image');
     const closeButton = qs('.image-modal-close');
-    const activityImages = qsa('.actividad-image img');
+    // Only include activity images in the modal gallery.
+    // Exclude news images (noticia-principal / noticia-card) to disable click-to-enlarge in Noticias.
+    const galleryImages = qsa('.actividad-image img');
 
-    if (!imageModal || !modalImage || !activityImages.length) return;
+    if (!imageModal || !modalImage || !galleryImages.length) return;
 
     const closeModal = () => {
         imageModal.classList.remove('is-open');
@@ -200,7 +202,7 @@ const initImageModal = () => {
         setBodyScroll(true);
     };
 
-    activityImages.forEach(image => {
+    galleryImages.forEach(image => {
         image.addEventListener('click', () => {
             modalImage.src = image.src;
             modalImage.alt = image.alt;

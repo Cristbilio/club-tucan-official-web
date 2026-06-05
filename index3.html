@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Tucán | Centro Juvenil Guatemala</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+        
+        :root {
+            --tucan-primary: #61b8a7;
+            --tucan-secondary: #ef9002;
+        }
+
+        body { font-family: 'Rubik', sans-serif; }
+        h1, h2, h3, .font-title { font-family: 'Anton', sans-serif; text-transform: uppercase; letter-spacing: 0.02em; }
+        
+        .bg-primary { background-color: var(--tucan-primary); }
+        .text-primary { color: var(--tucan-primary); }
+        .bg-secondary { background-color: var(--tucan-secondary); }
+        .text-secondary { color: var(--tucan-secondary); }
+        .border-primary { border-color: var(--tucan-primary); }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #61b8a7 0%, #4a9e8e 100%);
+        }
+        
+        .btn-primary {
+            background-color: var(--tucan-secondary);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            filter: brightness(1.1);
+            transform: translateY(-2px);
+        }
+
+        .objectives-card {
+            border-bottom: 5px solid var(--tucan-primary);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-800">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-2">
+                    <div class="bg-primary p-2 rounded-lg text-white">
+                        <i data-lucide="bird" class="w-8 h-8"></i>
+                    </div>
+                    <span class="text-3xl font-title text-primary">TUCÁN</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 items-center font-bold text-slate-600 text-sm">
+                    <a href="#inicio" class="hover:text-primary transition">Inicio</a>
+                    <a href="#nosotros" class="hover:text-primary transition">Acerca de</a>
+                    <a href="#the-mark" class="text-secondary font-black hover:scale-105 transition">The Mark Program</a>
+                    <a href="#contacto" class="btn-primary text-white px-6 py-2.5 rounded-full shadow-lg">Inscribirme</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-primary">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-6 space-y-4 shadow-xl">
+            <a href="#nosotros" class="block font-bold">Acerca de</a>
+            <a href="#the-mark" class="block font-bold text-secondary italic underline">The Mark Program</a>
+            <a href="#contacto" class="block text-primary font-bold">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center text-center lg:text-left">
+                <div>
+                    <h1 class="text-6xl lg:text-8xl mb-6 leading-none">
+                        Deja <span class="text-slate-900">Huella</span><br>en tu vida.
+                    </h1>
+                    <p class="text-xl opacity-90 mb-10 font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                        Un espacio seguro, formativo y dinámico en Guatemala para jóvenes de 14 a 22 años que desean crecer personal y académicamente.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contacto" class="btn-primary text-white px-10 py-4 rounded-xl font-bold text-lg shadow-xl shadow-black/10">
+                            ¡Quiero unirme!
+                        </a>
+                        <a href="#the-mark" class="bg-white/10 border border-white/20 backdrop-blur-sm px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition">
+                            Ver Programa
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden lg:block">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-secondary rounded-[3rem] rotate-3 opacity-20"></div>
+                        <div class="relative bg-white/10 backdrop-blur-md p-8 rounded-[3rem] border border-white/30">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-white/10 h-40 rounded-2xl flex flex-col items-center justify-center p-4">
+                                    <i data-lucide="book" class="mb-2"></i>
+                                    <span class="text-xs uppercase font-bold">Hábitos</span>
+                                </div>
+                                <div class="bg-white/10 h-40 rounded-2xl flex flex-col items-center justify-center p-4">
+                                    <i data-lucide="users" class="mb-2"></i>
+                                    <span class="text-xs uppercase font-bold">Amistad</span>
+                                </div>
+                                <div class="bg-white/10 h-40 rounded-2xl flex flex-col items-center justify-center p-4">
+                                    <i data-lucide="trophy" class="mb-2"></i>
+                                    <span class="text-xs uppercase font-bold">Deporte</span>
+                                </div>
+                                <div class="bg-white/10 h-40 rounded-2xl flex flex-col items-center justify-center p-4">
+                                    <i data-lucide="timer" class="mb-2"></i>
+                                    <span class="text-xs uppercase font-bold">Disciplina</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Acerca de -->
+    <section id="nosotros" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-20">
+                <h2 class="text-4xl lg:text-5xl text-primary mb-6">Acerca de Club Tucán</h2>
+                <div class="w-20 h-1.5 bg-secondary mx-auto mb-8"></div>
+                <p class="text-xl text-slate-600 leading-relaxed">
+                    Somos un Centro Juvenil de Complementación Educativa en Guatemala, nacido del compromiso de padres de familia para ofrecer medios que complementen la formación intelectual, humana y moral de sus hijos.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="space-y-6 text-lg text-slate-600">
+                    <p>En Club Tucán encuentran un ambiente cordial donde desarrollan el sentido de responsabilidad en el estudio, fortalecen valores humanos y construyen amistades auténticas.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-primary"></i>
+                            <span class="font-bold">14 a 22 años</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="text-primary"></i>
+                            <span class="font-bold">Formación Integral</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-primary/5 p-10 rounded-3xl border border-primary/20">
+                    <h3 class="text-2xl text-primary mb-4">Lo que promovemos:</h3>
+                    <ul class="space-y-4 font-bold text-slate-700">
+                        <li class="flex items-center gap-4"><span class="bg-white p-2 rounded-lg shadow-sm">📚</span> Hábitos de estudio efectivos</li>
+                        <li class="flex items-center gap-4"><span class="bg-white p-2 rounded-lg shadow-sm">🤝</span> Compañerismo y amistad</li>
+                        <li class="flex items-center gap-4"><span class="bg-white p-2 rounded-lg shadow-sm">⚽</span> Deportes y aficiones sanas</li>
+                        <li class="flex items-center gap-4"><span class="bg-white p-2 rounded-lg shadow-sm">⏳</span> Organización del tiempo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Mark Program -->
+    <section id="the-mark" class="py-24 bg-slate-900 text-white overflow-hidden relative">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-primary/10 -skew-x-12 transform translate-x-20"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="lg:w-1/2">
+                    <div class="inline-block bg-secondary px-6 py-2 mb-6">
+                        <span class="text-white font-black italic tracking-widest uppercase">The Mark Program</span>
+                    </div>
+                    <h2 class="text-5xl lg:text-7xl mb-8 leading-none">Descubre tu <br><span class="text-secondary italic">Potencial</span>.</h2>
+                    <p class="text-xl text-slate-300 mb-10">
+                        Diseñado para ayudar a los jóvenes a dejar huella. A través de acompañamiento cercano y metas concretas, fortalecemos el carácter para impactar positivamente en la sociedad.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex items-start gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
+                            <i data-lucide="sparkles" class="text-secondary"></i>
+                            <span class="text-sm font-bold">Liderazgo y trabajo en equipo</span>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
+                            <i data-lucide="brain" class="text-secondary"></i>
+                            <span class="text-sm font-bold">Toma de decisiones con criterio</span>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
+                            <i data-lucide="graduation-cap" class="text-secondary"></i>
+                            <span class="text-sm font-bold">Excelencia académica</span>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 bg-white/5 rounded-xl border border-white/10">
+                            <i data-lucide="calendar" class="text-secondary"></i>
+                            <span class="text-sm font-bold">Aprovechamiento del tiempo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-white rounded-3xl p-1 lg:p-4 rotate-2 shadow-2xl">
+                         <div class="bg-primary/10 rounded-2xl h-[450px] flex items-center justify-center">
+                            <div class="text-primary/40 flex flex-col items-center">
+                                <i data-lucide="award" class="w-24 h-24 mb-4"></i>
+                                <span class="font-title text-3xl italic">Más que un programa</span>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Objetivos -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl text-center text-primary mb-16">Nuestros Objetivos</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Objetivo 1 -->
+                <div class="bg-white p-10 rounded-2xl shadow-sm objectives-card">
+                    <div class="text-5xl font-title text-secondary/20 mb-6">01</div>
+                    <h3 class="text-xl text-primary mb-4">Uso responsable del tiempo libre</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Enseñar a aprovechar positivamente el tiempo libre mediante actividades formativas y espíritu de servicio.</p>
+                </div>
+                <!-- Objetivo 2 -->
+                <div class="bg-white p-10 rounded-2xl shadow-sm objectives-card">
+                    <div class="text-5xl font-title text-secondary/20 mb-6">02</div>
+                    <h3 class="text-xl text-primary mb-4">Apoyo académico y hábitos</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Complementar la educación universitaria y escolar mediante métodos de estudio eficaces para mejorar el rendimiento.</p>
+                </div>
+                <!-- Objetivo 3 -->
+                <div class="bg-white p-10 rounded-2xl shadow-sm objectives-card">
+                    <div class="text-5xl font-title text-secondary/20 mb-6">03</div>
+                    <h3 class="text-xl text-primary mb-4">Desarrollo y Responsabilidad</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Fortalecer la formación humana, promoviendo actitudes de superación y compromiso social y familiar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formación Espiritual -->
+    <section class="py-20 bg-primary/5">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <i data-lucide="church" class="w-12 h-12 text-primary mx-auto mb-6"></i>
+            <h2 class="text-3xl text-primary mb-6 italic">Formación Espiritual</h2>
+            <p class="text-lg text-slate-700 leading-relaxed mb-8">
+                Ofrecemos actividades orientadas a fortalecer la vida cristiana de manera libre. La labor doctrinal y espiritual ha sido confiada a la <strong>Prelatura del Opus Dei</strong>, institución de la Iglesia Católica.
+            </p>
+            <div class="inline-block border-2 border-primary/20 px-8 py-3 rounded-full text-primary font-bold uppercase text-xs tracking-widest">
+                Encontrar a Dios en lo ordinario
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white border-2 border-gray-100 rounded-[3rem] overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                <div class="p-12 md:w-1/2">
+                    <h2 class="text-4xl text-primary mb-6">¿Deseas Unirte?</h2>
+                    <p class="text-slate-500 mb-8">Déjanos tus datos para coordinar una entrevista informativa con tu familia.</p>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Nombre completo" class="w-full px-5 py-3 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-primary outline-none">
+                        <input type="email" placeholder="Email de contacto" class="w-full px-5 py-3 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-primary outline-none">
+                        <textarea placeholder="Cuéntanos sobre tus intereses académicos o deportivos" rows="4" class="w-full px-5 py-3 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-primary outline-none"></textarea>
+                        <button class="w-full py-4 btn-primary text-white font-bold rounded-xl shadow-lg shadow-orange-200">
+                            Enviar Solicitud
+                        </button>
+                    </form>
+                </div>
+                <div class="p-12 md:w-1/2 bg-primary text-white flex flex-col justify-center">
+                    <h3 class="text-2xl mb-8">Información General</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="map-pin"></i>
+                            <span>Ciudad de Guatemala, Guatemala</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="phone"></i>
+                            <span>+502 [Número de teléfono]</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i data-lucide="mail"></i>
+                            <span>info@clubtucan.gt</span>
+                        </div>
+                        <div class="flex items-center gap-4 pt-4">
+                            <i data-lucide="clock"></i>
+                            <span>De jóvenes para jóvenes (14-22 años)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-slate-900 text-white border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-3 mb-6">
+                <i data-lucide="bird" class="text-primary w-6 h-6"></i>
+                <span class="text-2xl font-title tracking-tighter">CLUB TUCÁN</span>
+            </div>
+            <p class="text-slate-500 text-xs mb-4 uppercase tracking-[0.2em]">Guatemala · The Mark Program · Opus Dei</p>
+            <div class="w-full h-px bg-white/5 mb-8"></div>
+            <p class="text-[10px] text-slate-600">© <span id="current-year">2025</span> Centro Juvenil de Complementación Educativa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        // Menu móvil toggle
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        btn.onclick = () => {
+            menu.classList.toggle('hidden');
+        };
+
+        // Update copyright year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
