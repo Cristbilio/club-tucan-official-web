@@ -228,6 +228,13 @@ nav.scrolled {
     text-align: center;
 }
 
+.about-text h3 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
 .about-text p {
     margin-bottom: 1.5rem;
     color: #555;
@@ -279,6 +286,13 @@ nav.scrolled {
     font-size: 1.8rem;
     color: var(--primary);
     margin-bottom: 1rem;
+}
+
+.objective-item p {
+    margin-bottom: 1.5rem;
+    color: #555;
+    font-size: 1.1rem;
+    text-align: left;
 }
 
 /* Mark Program Section */
